@@ -7,11 +7,11 @@
 <div>
     <form asp-action="Edit">
         <div asp-validation-summary="ModelOnly"></div>
-        <input type="hidden" asp-for="IdPaciente">
+        <input type="hidden" asp-for="IdPaciente"> @*esto sirve para pasar el id, en este input se guarda*@
         <div>
             <div>
                 <label asp-for="Nombre"></label>
-                <input asp-for="Nombre" />
+                <input asp-for="Nombre" /> @*pero en estos input se inserta el dato para luego enviarlo.*@
                 <span asp-validation-for="Nombre"></span>
             </div>
             <div>
