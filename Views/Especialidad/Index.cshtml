@@ -1,0 +1,32 @@
+
+@model IEnumerable<Turnos.Models.Especialidad>
+@* comentario *@
+
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+<table>
+    <thead>
+        <tr>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=> item.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+            </td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>  
+        }
+    </tbody>
+</table>
+       
+
